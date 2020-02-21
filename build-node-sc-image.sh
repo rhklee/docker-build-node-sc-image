@@ -51,7 +51,7 @@ function main() {
   local registry="$1" registryUsername="$2"
   local nodeVersion="${4:-12.14.0}" scVersion="${5:-4.5.4}"
 
-  taggedImageName="$registry/cate/ci/node-sc:node-${nodeVersion}_sc-${scVersion}"
+  taggedImageName="$registry/node-sc:node-${nodeVersion}_sc-${scVersion}"
 
   docker_login "$registry" "$registryUsername"
   docker_build "$taggedImageName" "$nodeVersion" "$scVersion"
